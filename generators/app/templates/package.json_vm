@@ -1,0 +1,51 @@
+{
+  "name": "<%= answers.name %>",
+  "version": "0.0.1",
+  "description": "<%= answers.description %>",
+  "author": "<%= answers.username %> <% if(answers.email){ %><<%= answers.email %>><% } %>",
+  "scripts": {
+    "start": " cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js --open 'Chrome'",
+    "lint": "npx eslint --config .eslintrc src --fix",
+    "build": "cross-env NODE_ENV=production  webpack --config webpack.config.js --progress",
+    "size": " cross-env NODE_ENV=analyzer webpack --config webpack.config.js --progress"
+  },
+  "keywords": [<% answers.keywords.split(',').forEach(function(value, index){ %> <%if (index!==0){%>,<%}%>"<%= value.trim() %>" <%})%>],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-1": "^7.0.0",
+    "@babel/runtime": "^7.3.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^5.13.0",
+    "eslint-plugin-react": "^7.12.4",
+    "happypack": "^5.0.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^4.29.0",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "director": "^1.2.8",
+    "mobx": "^4.0.0",
+    "mobx-react": "^5.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "todomvc-app-css": "^2.1.0",
+    "todomvc-common": "^1.0.3"
+  }
+}
