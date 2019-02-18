@@ -1,6 +1,6 @@
 {
   "name": "generator-react-mobx-scss",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "react scaffold Component automatic",
   "author": {
     "name": "matrix",
@@ -68,6 +68,6 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "https://github.com/dkypooh/front-end-develop-demo.git",
+  "repository": "https://github.com/ge-tbms/generator-react-mobx-scss.git",
   "license": "MIT"
 }
