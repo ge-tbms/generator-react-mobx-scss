@@ -16,6 +16,9 @@ class gen extends Generator {
   }
 
   prompting() {
+    this.log(
+      yosay(`Welcome to the ${chalk.red('react-mobx-scss')} generator!`)
+    );
     return this.prompt([
       {
         type: 'input',
